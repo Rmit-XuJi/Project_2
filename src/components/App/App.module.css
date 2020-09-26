@@ -1,0 +1,9 @@
+.container{
+    background-image: url('https://wallpaperaccess.com/full/2629319.png');
+    background-size: cover;
+    width: 100vw;
+    height: 800px;
+
+    box-sizing: border-box;
+    padding: 100px;
+}

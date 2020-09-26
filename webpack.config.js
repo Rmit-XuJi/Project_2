@@ -10,7 +10,7 @@ module.exports = {
 
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.js$/, 
             use: {
                 loader: 'babel-loader',
                 options: {
@@ -19,7 +19,7 @@ module.exports = {
             },
         },{
             test: /\.css$/,
-            use: ['style-loader','css-loader'],
+            use: ['style-loader','css-loader?modules'],
         },{
             test: /\.(png|webp)$/,
             use: ['file-loader'],
