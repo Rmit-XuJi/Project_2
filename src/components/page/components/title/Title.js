@@ -3,11 +3,17 @@ import styles from './Title.module.css';
 import City from './components/city';
 import Weather from './components/weather';
 
-const Title = () => {
+const Title = ({
+    activeCity,
+    weatherDetail,
+}) => {
     return (
         <div className={styles.title}>
-            <Weather />
-            <City />
+            <Weather 
+                activeCity={activeCity} 
+                weatherDetail={weatherDetail}
+            />
+            <City activeCity={activeCity} />
         </div>
     )
 }

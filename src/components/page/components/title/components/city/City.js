@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from './City.module.css'
 
-const City = () => {
+const City = ({
+    activeCity
+}) => {
     return (
         <div className={styles.city}>
-            <h2 className={styles.city_name}>Melbourne</h2>
+            <h2 className={styles.city_name}>{activeCity}</h2>
         </div>
     )
 }
