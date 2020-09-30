@@ -8,8 +8,8 @@ const DailyForecast = ({
     return (
         <div className={styles.DailyForecast}>
             <label>{day}</label>
-            <div>{dailyForecast.type}</div>
-            <div>{dailyForecast.degree}</div>
+            <img src={`http://openweathermap.org/img/w/${dailyForecast.weather[0].icon}.png`}></img>
+            <div>{dailyForecast.temp.day}</div>
         </div>
     )
 }

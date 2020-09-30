@@ -6,17 +6,20 @@ const CityBrief = ({
     onCityClick,
     weatherToday,
 }) => {
-    return (
-        <div>
-            <button 
-                className={styles.cityLink}
-                onClick={onCityClick}
-            >    {cityName} 
-                 <span>{weatherToday.degree}</span> 
-                 <span>{weatherToday.type}</span>
-            </button>
-        </div>
-    )
+    if(weatherToday === undefined)
+        return ( <div className={styles.CityBrief}></div>)
+    else
+        return (
+            <div className={styles.CityBrief}>
+                <div 
+                    className={styles.cityLink}
+                    onClick={onCityClick}
+                    >{cityName} 
+                </div>
+                <div>{weatherToday.temp}</div> 
+                <img src={`http://openweathermap.org/img/w/${weatherToday.weather[0].icon}.png`}></img>
+            </div>
+        )
 }
 
 export default CityBrief;

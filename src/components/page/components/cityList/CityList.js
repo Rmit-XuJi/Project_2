@@ -5,16 +5,16 @@ import Forecast from './components/forecast';
 
 const CityList = ({
     activeCity,
+    cities,
     onCityClick,
     forecast,
-    weatherToday,
 }) => {
     return(
         <div className={styles.details}>
             <OtherCities 
                 activeCity={activeCity} 
+                cities={cities}
                 onCityClick={onCityClick}
-                weatherToday={weatherToday}
             />
             <Forecast 
                 activeCity={activeCity}
